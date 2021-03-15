@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
+# Содержит полный путь к месту хранения моего проекта
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
@@ -20,16 +21,19 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+# перед выгрузской изменить
 SECRET_KEY = 'q4g&6fi5*=260^f01)j%l&35!^nijl*y0(@^411q(^25f9*po-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
+# При выгрузке установить false чтобы не показывало ошибки на странице
 DEBUG = True
 
+# Указываем все доменные имена где будет опубликован сайт(разрешенные хосты)
 ALLOWED_HOSTS = []
 
 
 # Application definition
-
+# Хранит все установленные приложения
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -39,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 
+# плагины или библиотеки которые обеспечивают все
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -49,8 +54,10 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+# основной урл файл
 ROOT_URLCONF = 'Djangotests.urls'
 
+# указываются шаблоны которые будут использоваться в проекте
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -67,6 +74,7 @@ TEMPLATES = [
     },
 ]
 
+# С помощью этой технологии будут происходить выгрузка на сервер
 WSGI_APPLICATION = 'Djangotests.wsgi.application'
 
 

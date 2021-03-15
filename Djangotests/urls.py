@@ -18,4 +18,6 @@ from django.urls import path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # При переходе будет открываться панель администратора
+    # Отслеживание url адресов
 ]
