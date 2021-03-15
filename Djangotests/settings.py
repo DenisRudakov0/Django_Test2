@@ -35,6 +35,7 @@ ALLOWED_HOSTS = []
 # Application definition
 # Хранит все установленные приложения
 INSTALLED_APPS = [
+    'main', # registed apps
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
